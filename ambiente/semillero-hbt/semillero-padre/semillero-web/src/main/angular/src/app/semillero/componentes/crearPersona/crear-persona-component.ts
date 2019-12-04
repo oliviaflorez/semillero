@@ -5,12 +5,16 @@ import { ComicDTO } from '../../dto/comic.dto';
  * @description La clase CrearPersonaComponent permite crear personas
  * @author Diego Fernando Alvarez Silva <dalvarez@heinsohn.com.co>
  */
+
 @Component({
     selector: 'crear-persona',
-    templateUrl: './crear-persona-component.html'
+    templateUrl: './crear-persona-component.html',
+    
 })
 export class CrearPersonaComponent implements OnInit{
-    
+    /**
+     * atributo que contiene el nombre del instrucctor
+     */
     private nombreInstructorGlobalPrivado : string;
     public nombreInstructorGlobalPublic : string;
 
