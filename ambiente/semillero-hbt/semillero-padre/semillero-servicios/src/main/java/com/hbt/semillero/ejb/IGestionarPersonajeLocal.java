@@ -7,9 +7,12 @@ package com.hbt.semillero.ejb;
 
 
 import java.util.List;
+
 import javax.ejb.Local;
 
-//import com.hbt.semillero.dto.ComicDTO;
+import com.hbt.semillero.dto.PersonajeDTO;
+
+
 
 @Local
 	public interface IGestionarPersonajeLocal {
@@ -19,7 +22,7 @@ import javax.ejb.Local;
 		 * @author oliviaflorez
 		 * 
 		 */
-		public void crearPersonaje();
+		public void  crearPersonaje(PersonajeDTO personajeDTO);
 		
 		/**
 		 * Metodo encargado de consultar un personaje modificarlo y guardarlo
@@ -41,12 +44,17 @@ import javax.ejb.Local;
 		 * @return personaje Resultado de la consulta
 		 * @throws Exception si no se recibe idpersonaje
 		 */
-		public PersonajeDTO consultarPersonaje(String idpersonaje);
+	//	public void  consultarPersonaje();
 
 		/**
 		 * 
 		 * Metodo encargado de retornar una lista de personajes
 		 * @return
 		 */
+	
+	
 		public List<PersonajeDTO> consultarPersonajes();
+		
+		
+		public List<PersonajeDTO> consultarPersonajes(long idComic);
 	}
